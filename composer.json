@@ -13,6 +13,7 @@
 		}
 	},
 	"require": {
+		"bacon/bacon-qr-code": "^2.0",
 		"pragmarx/google2fa-qrcode": "^2.1",
 		"litstack/litstack": "^3.1.2"
 	},
