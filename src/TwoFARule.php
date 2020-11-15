@@ -10,17 +10,17 @@ class TwoFARule implements Rule
     /**
      * Authenticated user.
      *
-     * @var Authenticable
+     * @var Authenticatable
      */
     protected $user;
 
     /**
      * Create a new rule instance.
      *
-     * @param  Authenticable $user
+     * @param  Authenticatable $user
      * @return void
      */
-    public function __construct(Authenticable $user = null)
+    public function __construct(Authenticatable $user = null)
     {
         $this->user = $user;
 

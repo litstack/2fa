@@ -2,7 +2,7 @@
 
 namespace Litstack\TwoFA;
 
-interface Authenticable
+interface Authenticatable
 {
     /**
      * Generates new secret. Needs to verify key first if a secret is already set.

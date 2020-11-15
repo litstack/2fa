@@ -13,7 +13,7 @@ class TwoFARequest extends FormRequest
      */
     public function authorize()
     {
-        if (! lit_user() instanceof Authenticable) {
+        if (! lit_user() instanceof Authenticatable) {
             return false;
         }
 

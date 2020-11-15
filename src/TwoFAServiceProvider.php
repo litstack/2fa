@@ -33,6 +33,11 @@ class TwoFAServiceProvider extends ServiceProvider
         });
     }
 
+    /**
+     * Boot application services.
+     *
+     * @return void
+     */
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../views', 'litstack-2fa');
@@ -51,7 +56,7 @@ class TwoFAServiceProvider extends ServiceProvider
 
         $this->callAfterResolving('lit.auth', function ($auth) {
             $auth->attempting(function ($user, $params) {
-                if (! $user instanceof Authenticable) {
+                if (! $user instanceof Authenticatable) {
                     return true;
                 }
 
