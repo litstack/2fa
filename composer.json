@@ -1,31 +1,31 @@
 {
-    "name": "litstack/2fa",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "cbl",
-            "email": "lennart.carbe@gmail.com"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Litstack\\TwoFA\\": "src"
-        }
-    },
-    "require": {
-        "pragmarx/google2fa": "^8.0",
-        "bacon/bacon-qr-code": "^2.0"
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Litstack\\TwoFA\\TwoFAServiceProvider"
-            ]
-        },
-        "branch-alias": {
-            "dev-master": "1.x-dev"
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+	"name": "litstack/2fa",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "cbl",
+			"email": "lennart.carbe@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"Litstack\\TwoFA\\": "src"
+		}
+	},
+	"require": {
+		"pragmarx/google2fa-qrcode": "^2.1",
+		"litstack/litstack": "^3.1.2"
+	},
+	"extra": {
+		"laravel": {
+			"providers": [
+				"Litstack\\TwoFA\\TwoFAServiceProvider"
+			]
+		},
+		"branch-alias": {
+			"dev-master": "1.x-dev"
+		}
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true
 }
