@@ -1,4 +1,4 @@
-# Litstack Two Factor Authentication
+# Litstack 2 Factor Authentication
 
 Litstack **2fa** adds two factor authentication to your litstack application.
 
