@@ -27,9 +27,25 @@ interface Authenticatable
      */
     public function getTwoFA(): TwoFA;
 
+    /**
+     * Determines if 2 factor authentication is enabled.
+     *
+     * @return bool
+     */
     public function is2FAEnabled(): bool;
 
+    /**
+     * Enabled 2 factor authentication.
+     *
+     * @return void
+     */
     public function enable2FA();
 
+    /**
+     * Disable 2 factor authentication.
+     *
+     * @param  string $secret
+     * @return void
+     */
     public function disable2FA($secret);
 }

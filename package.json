@@ -1,21 +1,21 @@
 {
-    "name": "litstack-2fa",
-    "version": "1.0.0",
-    "description": "",
-    "main": "js/2fa.js",
-    "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "dev": "npm run development",
-        "prod": "npm run production"
-    },
-    "author": "Lennart Carstens-Behrens",
-    "license": "MIT",
-    "dependencies": {},
-    "devDependencies": {
-        "cross-env": "^7.0.2",
-        "laravel-mix": "^5.0.9",
-        "vue-template-compiler": "^2.6.12"
-    }
+	"name": "litstack-2fa",
+	"version": "1.0.0",
+	"description": "",
+	"main": "js/2fa.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"dev": "npm run development",
+		"prod": "npm run production"
+	},
+	"author": "Lennart Carstens-Behrens",
+	"license": "MIT",
+	"dependencies": {},
+	"devDependencies": {
+		"cross-env": "^7.0.2",
+		"laravel-mix": "^5.0.9",
+		"vue-template-compiler": "^2.6.12"
+	}
 }

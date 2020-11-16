@@ -7,15 +7,28 @@
 			"email": "lennart.carbe@gmail.com"
 		}
 	],
+	"scripts": {
+		"test": "vendor/bin/phpunit"
+	},
 	"autoload": {
 		"psr-4": {
 			"Litstack\\TwoFA\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Tests\\": "tests/"
 		}
 	},
 	"require": {
 		"bacon/bacon-qr-code": "^2.0",
 		"pragmarx/google2fa-qrcode": "^2.1",
 		"litstack/litstack": "^3.1.2"
+	},
+	"require-dev": {
+		"litstack/rehearsal": "^1.0.1",
+		"phpunit/phpunit": "^9.4",
+		"mockery/mockery": "^1.4"
 	},
 	"extra": {
 		"laravel": {

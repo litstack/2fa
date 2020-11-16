@@ -32,7 +32,6 @@ class TwoFAController
      */
     public function activate(TwoFAChangeRequest $request)
     {
-        lit_user()->two_fa_enabled = true;
-        lit_user()->save();
+        lit_user()->enable2FA();
     }
 }

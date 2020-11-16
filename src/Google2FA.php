@@ -6,8 +6,18 @@ use PragmaRX\Google2FAQRCode\Google2FA as G2FA;
 
 class Google2FA implements TwoFa
 {
+    /**
+     * Google2FA instance.
+     *
+     * @var G2FA
+     */
     protected $google2fa;
 
+    /**
+     * Create new Google2FA instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->google2fa = new G2FA;
@@ -48,5 +58,16 @@ class Google2FA implements TwoFa
     public function getQRCodeUrl($company, $holder, $secret)
     {
         return $this->google2fa->getQRCodeInline($company, $holder, $secret);
+    }
+
+    /**
+     * Get current one time password for the given secret.
+     *
+     * @param  string $secret
+     * @return string
+     */
+    public function getCurrentOtp($secret)
+    {
+        return $this->google2fa->getCurrentOtp($secret);
     }
 }

@@ -31,4 +31,12 @@ interface TwoFA
      * @return string
      */
     public function getQRCodeUrl($company, $holder, $secret);
+
+    /**
+     * Get current one time password for the given secret.
+     *
+     * @param  string $secret
+     * @return string
+     */
+    public function getCurrentOtp($secret);
 }
