@@ -52,6 +52,6 @@ class TwoFARule implements Rule
      */
     public function message()
     {
-        return 'The code is incorrect.';
+        return __lit('2fa.messages.incorrect');
     }
 }

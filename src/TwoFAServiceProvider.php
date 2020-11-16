@@ -3,6 +3,7 @@
 namespace Litstack\TwoFA;
 
 use Ignite\Crud\CrudShow;
+use Ignite\Crud\Form;
 use Ignite\Routing\Router;
 use Ignite\Support\Facades\Lit;
 use Ignite\Translation\Translator;
@@ -44,6 +45,10 @@ class TwoFAServiceProvider extends ServiceProvider
 
         Lit::script(__DIR__.'/../dist/2fa.js');
         Lit::loginScript(__DIR__.'/../dist/2fa-login.js');
+
+        $this->callAfterResolving('lit.form', function (Form $form) {
+            $form->field('verify', VerifyField::class);
+        });
 
         $this->callAfterResolving('lit.translator', function (Translator $translator) {
             $translator->addPath(__DIR__.'/../lang');

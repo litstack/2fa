@@ -2,9 +2,12 @@
 
 return [
     '2fa'      => 'zwei faktor Authentifizierung',
+    'verify'   => 'verifizieren',
     'activate' => '2 Factor Authentifizierung aktivieren',
     'code'     => 'Authentifizierungscode',
     'messages' => [
+        'incorrect'       => 'Der Authentifizierungscode ist falsch.',
+        'please-verify'   => 'Bitte verifiziere deine Änderungen.',
         'protected'       => 'Dein Konto ist durch Zwei Faktor Authentifizierung geschützt',
         'info'            => 'Mit Zwei-Faktor-Authentifizierung kannst ausschließlich du auf dein Konto zugreifen – selbst, wenn jemand anders im Besitz deines Passworts ist. <a href="https://www.youtube.com/watch?v=0mvCeNsTa1g" target="_blank">Mehr erfahren.</a>',
         'how-it-works'    => 'WIE ES FUNKTIONIERT',
