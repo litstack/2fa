@@ -4,8 +4,8 @@ namespace Litstack\TwoFA;
 
 use Ignite\Crud\CrudShow;
 use Ignite\Crud\Form;
+use Ignite\Foundation\Litstack;
 use Ignite\Routing\Router;
-use Ignite\Support\Facades\Lit;
 use Ignite\Translation\Translator;
 use Illuminate\Support\ServiceProvider;
 
@@ -43,8 +43,10 @@ class TwoFAServiceProvider extends ServiceProvider
     {
         $this->loadViewsFrom(__DIR__.'/../views', 'litstack-2fa');
 
-        Lit::script(__DIR__.'/../dist/2fa.js');
-        Lit::loginScript(__DIR__.'/../dist/2fa-login.js');
+        $this->callAfterResolving('lit', function (Litstack $litstack) {
+            $litstack->script(__DIR__.'/../dist/2fa.js');
+            $litstack->loginScript(__DIR__.'/../dist/2fa-login.js');
+        });
 
         $this->callAfterResolving('lit.form', function (Form $form) {
             $form->field('verify', VerifyField::class);
