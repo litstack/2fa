@@ -2,6 +2,7 @@
 
 namespace Litstack\TwoFA;
 
+use Ignite\Application\Application;
 use Ignite\Crud\CrudShow;
 use Ignite\Crud\Form;
 use Ignite\Foundation\Litstack;
@@ -45,7 +46,10 @@ class TwoFAServiceProvider extends ServiceProvider
 
         $this->callAfterResolving('lit', function (Litstack $litstack) {
             $litstack->script(__DIR__.'/../dist/2fa.js');
-            $litstack->loginScript(__DIR__.'/../dist/2fa-login.js');
+        });
+
+        $this->callAfterResolving('lit.app', function (Application $app) {
+            $app->loginScript(__DIR__.'/../dist/2fa-login.js');
         });
 
         $this->callAfterResolving('lit.form', function (Form $form) {
