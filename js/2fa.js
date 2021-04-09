@@ -1,6 +1,7 @@
-import Lit from 'litstack/resources/js/common/lit';
 import LitTwoFA from './LitTwoFA';
 import LitFieldVerify from './LitFieldVerify';
+
+console.log('Hi');
 
 Lit.booting((Vue) => {
 	Vue.component('lit-two-fa', LitTwoFA);
