@@ -19,7 +19,7 @@ return [
             'scan-qr'          => 'Open the Authenticator app on your mobile device and scan the QR Code.',
             'key'              => 'You cannot scan the QR Code? <br />Configure your app with this key:',
             'enter-password'   => 'Enter the password you currently use to log in.',
-            'current-password' => 'Current Passwort',
+            'current-password' => 'Current Password',
             'step-1'           => 'INSTALL AUTHENTICATOR-APP',
             'step-2'           => 'CONFIGURE APP',
             'step-3'           => 'ENTER YOUR CURRENT PASSWORD',
